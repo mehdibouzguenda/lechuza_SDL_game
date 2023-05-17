@@ -129,7 +129,6 @@ void option(SDL_Surface* ecran,Mix_Chunk *effet,Mix_Chunk *effet2,Mix_Music *mus
            	}
             	sound(ecran,effet,effet2,&musique,mute,continuer,&boucle,posvolb);
             }
-
             break;
         }
 if(boucle)
