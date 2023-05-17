@@ -25,30 +25,38 @@ int main() {
     SDL_Flip(ecran);
     Mix_PlayMusic(musique, -1);
 
+    int now = 0;
+    int ex = 0;
+    int FPS = 30;
+    int dt = 0;
 
     while (continuer) {
-        while (SDL_PollEvent(&event))
-            switch (event.type) {
-                case SDL_QUIT:
-                    continuer = 0;
-                    break;
-                case SDL_KEYDOWN:
-                    buttons1(ecran, event, effet, effet2, &continuer, musique, &mute, &posvolb, musiquetuto, sonspell,
-                             dying, hit, &victory);
-                    break;
-                case SDL_MOUSEBUTTONUP:
-                    buttons(ecran, event, effet, effet2, &continuer, musique, &mute, &posvolb, musiquetuto, sonspell,
-                            dying, hit, &victory);
-                    break;
+        now = SDL_GetTicks();
+        dt = now - ex;
+        if (dt > FPS) {
+            while (SDL_PollEvent(&event))
+                switch (event.type) {
+                    case SDL_QUIT:
+                        continuer = 0;
+                        break;
+                    case SDL_KEYDOWN:
+                        buttons1(ecran, event, effet, effet2, &continuer, musique, &mute, &posvolb, musiquetuto,
+                                 sonspell,
+                                 dying, hit, &victory);
+                        break;
+                    case SDL_MOUSEBUTTONUP:
+                        buttons(ecran, event, effet, effet2, &continuer, musique, &mute, &posvolb, musiquetuto,
+                                sonspell,
+                                dying, hit, &victory);
+                        break;
 
-                case SDL_MOUSEMOTION:
-                    affichagetextmenu(&police, &police1, couleur, couleur2, event, &texteplay, &textemulti,
-                                      &texteoption, &textequit, &commentaireplay, &commentaireoption, &commentairemulti,
-                                      &commentairequit, effet, &son, &mute);
-                    break;
-            }
-
-        if (continuer) {
+                    case SDL_MOUSEMOTION:
+                        affichagetextmenu(&police, &police1, couleur, couleur2, event, &texteplay, &textemulti,
+                                          &texteoption, &textequit, &commentaireplay, &commentaireoption,
+                                          &commentairemulti,
+                                          &commentairequit, effet, &son, &mute);
+                        break;
+                }
             positionshab(&posshab1, &posshab2, &posshab3, &direction, &direction2, &direction3);
             SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 0, 0, 0));
             SDL_BlitSurface(menu, NULL, ecran, &positionFond);
@@ -66,6 +74,10 @@ int main() {
             SDL_BlitSurface(shab2, NULL, ecran, &posshab2);
 
             SDL_Flip(ecran);
+            ex = now;
+
+        } else {
+            SDL_Delay(FPS - dt);
         }
     }
 
