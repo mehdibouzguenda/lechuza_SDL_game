@@ -435,6 +435,7 @@ void chargerTous(SDL_Surface **ecran,SDL_Surface **star,SDL_Surface **shab1,SDL_
     (*textemulti) = TTF_RenderText_Blended((*police), "2: CONTINUE", couleur);
     (*texteoption) = TTF_RenderText_Blended((*police), "3: OPTION", couleur);
     (*textequit) = TTF_RenderText_Blended((*police), "0: QUIT", couleur);
+
 }
 void remplirlesposition(SDL_Rect *positionFond,SDL_Rect *posquit,SDL_Rect *posmulti,SDL_Rect *posoption, SDL_Rect *posplay,SDL_Rect *posstar,SDL_Rect *poscquit,SDL_Rect *poscmulti,SDL_Rect *poscoption,SDL_Rect *poscplay,SDL_Rect *posshab1,SDL_Rect *posshab2,SDL_Rect *posshab3,SDL_Rect *posvolb)
 {
