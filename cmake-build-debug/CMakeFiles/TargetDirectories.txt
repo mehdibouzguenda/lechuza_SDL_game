@@ -1,0 +1,3 @@
+/home/mehdi/Desktop/lechuza/cmake-build-debug/CMakeFiles/witch.dir
+/home/mehdi/Desktop/lechuza/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mehdi/Desktop/lechuza/cmake-build-debug/CMakeFiles/rebuild_cache.dir
