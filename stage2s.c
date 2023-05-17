@@ -24,7 +24,7 @@ void stage2s(SDL_Surface *ecran,int *continuer,Mix_Music *intro,Mix_Chunk *effet
 	int camera=0;
 	int directionhero=1,rotozoom=0;
 	int coll=0,sens=1;
-double angle=0, zoom=1;
+    double angle=0, zoom=1;
 	int enig=0,mouve=1;
 	int souri,mouvemmentsouri=0,scorefinal=0;
 	int ninjacompteur=0,dninja=6,d2=0;
