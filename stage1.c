@@ -124,7 +124,7 @@ stage0(SDL_Surface *ecran, int *continuer, Mix_Music *intro, Mix_Chunk *effet, M
                 animation(&heroactu, idlel, &i);
         }
 
-        if (keystates[SDLK_k]) {
+        if (keystates[SDLK_z]) {
             if (a == 0) {
                 posans = poshero.y;
                 a = 1;
@@ -641,7 +641,7 @@ stage1(SDL_Surface *ecran, int *continuer, Mix_Music *intro, Mix_Chunk *effet, M
         if (keystates[SDLK_b]) {
             boucle = 0;
         }
-        if (keystates[SDLK_k])//jump
+        if (keystates[SDLK_z])//jump
         {
             if (jump == 0 || CAR1 == 1 || CAR2 == 1 || CAR3 == 1 || CAR4 == 1 || CAR5 == 1 || CAR6 == 1 || CAR7 == 1 ||
                 CAR8 == 1 || CAR9 == 1 || CAR10 == 1) {

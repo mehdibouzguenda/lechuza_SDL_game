@@ -240,7 +240,7 @@ Multi(SDL_Surface *ecran, int *continuer, Mix_Music *intro, Mix_Chunk *effet, Mi
             enemattack = 1;
             x = 0;
         }
-        if (keystates[SDLK_k] && heroattack == 0)//jump
+        if (keystates[SDLK_z] && heroattack == 0)//jump
         {
             if (jump == 0) {
                 posans = poshero.y;

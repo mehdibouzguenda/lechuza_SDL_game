@@ -351,7 +351,7 @@ Pause2(ecran,&poshero.x,&posmagicien.x,&posenigme1.x,&poshpup.x,&posback.x,&posp
 		        posshiled.y=2000;
 		        mouve=1;
 		}
-		if(keystates[SDLK_k]&&heroattack==0)//jump
+		if(keystates[SDLK_z]&&heroattack==0)//jump
 		{
 			if(jump==0||CAR1==1||CAR2==1||CAR3==1||CAR4==1||CAR5==1||CAR6==1||CAR7==1||CAR8==1||CAR9==1||CAR10==1)
 			{

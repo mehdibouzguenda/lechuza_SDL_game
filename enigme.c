@@ -259,7 +259,7 @@ void enigme3(SDL_Surface **ecran,int **continuer,Mix_Music **intro,Mix_Chunk **e
 		if(e==2)
 		animation(&heroactu,idlel,&i);
 		}
-            	if(keystates[SDLK_k])
+            	if(keystates[SDLK_z])
 		{
             			if (a==0 || CAR3==1 || CAR2==1 || CAR1==1)
             			{
